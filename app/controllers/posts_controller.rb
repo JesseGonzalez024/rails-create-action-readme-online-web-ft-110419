@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.create(params.require(:posts).permit(:title, :description))
+    @post = Post.create(params.require(:post).permit(:title, :description))
     
     redirect_to action: "show", id: @post.id
   end
