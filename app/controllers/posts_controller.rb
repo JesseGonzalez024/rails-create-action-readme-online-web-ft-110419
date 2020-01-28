@@ -13,6 +13,8 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.create(params.require(:posts).permit(:title, :description))
+    
+    redirect_to 
   end
 
   # add create method here
