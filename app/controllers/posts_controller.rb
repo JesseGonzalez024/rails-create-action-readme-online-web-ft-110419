@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   
   def create
     binding.pry
-    @post = Post.create(params.require(:post).permit(:title, :description))
+    post = Post.new
     
     redirect_to action: "show", id: @post.id
   end
