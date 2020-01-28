@@ -12,12 +12,11 @@ class PostsController < ApplicationController
   end
   
   def create
-    binding.pry
     post = Post.new
     post.title = params[:title]
     post.description = params[:description]
     post.save
-    redirect_to action: "show", id: @post.id
+    redirect_to post_path(post)
   end
 
   # add create method here
