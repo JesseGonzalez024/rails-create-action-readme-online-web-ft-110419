@@ -14,7 +14,9 @@ class PostsController < ApplicationController
   def create
     binding.pry
     post = Post.new
-    
+    post.title = params[:title]
+    post.description = params[:description]
+    post.save
     redirect_to action: "show", id: @post.id
   end
 
