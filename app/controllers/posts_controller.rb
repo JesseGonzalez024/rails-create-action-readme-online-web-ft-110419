@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    
+    @post = Post.create(params.require(:posts).permit(:title, :description))
   end
 
   # add create method here
